@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <%= @retro.team.name%>
+</h1>
+
+<%= render 'form' %>
+
+<div class="category">
+<h2>Start <span class="counter" id="counter_2"><%= @retro.notes.find_all_by_category_id(2).count %></span></h2>
+<p><%= render 'notes/form' , :category_id => 2, :retro_id => @retro.id %></p>  <!-- Start -->
+<ul id="category_2">
+<% @retro.notes.find_all_by_category_id(2).each do |note| %>
+<%= render 'notelist', :note => note %>
+<% end %>
+</ul>
+</div>
+
+<div class="category">
+<h2>Stop <span class="counter" id="counter_3"><%= @retro.notes.find_all_by_category_id(3).count %></span></h2>
+<p><%= render 'notes/form' , :category_id => 3, :retro_id => @retro.id %></p>  <!-- Stop -->
+<ul id="category_3">
+<% @retro.notes.find_all_by_category_id(3).each do |note| %>
+<%= render 'notelist', :note => note %>
+<% end %>
+</ul>
+</div>
+
+<div class="category">
+<h2>Continue <span class="counter" id="counter_4"><%= @retro.notes.find_all_by_category_id(4).count %></span></h2>
+<p><%= render 'notes/form' , :category_id => 4, :retro_id => @retro.id %></p>   <!-- Continue -->
+<ul id="category_4">
+<% @retro.notes.find_all_by_category_id(4).each do |note| %>
+<%= render 'notelist', :note => note %>
+<% end %>
+</ul>
+</div>
+
+<div class="category">
+<h2>AHA <span class="counter" id="counter_1"><%= @retro.notes.find_all_by_category_id(1).count %></span></h2>
+<p><%= render 'notes/form' , :category_id => 1, :retro_id => @retro.id %></p>   <!-- AHA -->
+<ul id="category_1">
+<% @retro.notes.find_all_by_category_id(1).each do |note| %>
+<%= render 'notelist', :note => note %>
+<% end %>
+</ul>
+</div>

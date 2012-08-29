@@ -1,0 +1,5 @@
+$("#category_<%= @note.category_id%>").append("<%= j(render 'retros/notelist',:note => @note) %>");
+$("#note_<%=@note.id%>").css("opacity","0");
+$("#note_<%=@note.id%>").fadeTo("slow","1");
+$("form .textfield").val("");
+$("#counter_<%=@note.category_id%>").html("<%=@category_notes.count%>");

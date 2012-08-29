@@ -1,0 +1,8 @@
+$("#note_<%= @note.id %>").slideToggle(function(){
+  $("#note_<%= @note.id %>").remove();
+});
+$("#counter_<%=@note.category_id%>").html("<%=@category_notes.count%>");
+
+
+
+

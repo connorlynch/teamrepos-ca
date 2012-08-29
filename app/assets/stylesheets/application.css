@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ul{
+  list-style-type:none;
+  margin: 0;
+  padding:0;
+}
+ul li{
+  border-top: 1px dotted blue;
+  padding:4px 0px;
+}
+
+.category{
+  border-top:4px solid #0066CC;
+  width:600px;
+  display:inline-block;
+  vertical-align:top;
+  margin:10px 50px;
+}
+.new_note input {
+  border-radius:2px;
+  width:500px;
+  font-size:16pt;
+}
+#trash_can{
+  float:right;
+}
+.counter{
+  float:right;
+  font-weight:none;
+  border:1px solid white;
+  color:white;
+  padding: 3px 4px;
+  border-radius:8px;
+}
+#counter_1{
+  background:#3399FF;
+}
+#counter_3{
+  background:#CC3333;
+}
+#counter_4{
+  background:#FF9900;
+}
+#counter_2{
+  background:green;
+}
